@@ -13,11 +13,7 @@ public class Service {
     public void setName(String name) {
         this.name = name;
     }
-//    public Service(Client client, Car car) {
-//        this.client = client;
-//        this.car = car;
-//        this.client.setCar(car);
-//    }
+
 
     public Client getClient() {
         return client;

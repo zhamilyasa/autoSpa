@@ -41,6 +41,7 @@ public class AppConfig {
                 2000,
                 "visa",
                 currentHistory());
+        Aru.setCar(car());
         return Aru;
     }
     @Bean("Zhami")
@@ -50,18 +51,25 @@ public class AppConfig {
                 1500,
                 "cash",
                 currenHistoryForZhami());
-                Zhami.setCar(car());
+        Zhami.setCar(car2());
         return Zhami;
     }
+
+
+
     @Bean("Mitsubishi")
     public Car car() {
         Car car1=new Car();
         car1.setName("Mitsubishi Lanser");
         return car1;
+    } private Car car2() {
+        Car car2 = new Car();
+        car2.setName("Range Rover");
+        return car2;
     }
     @Bean("Service")
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-    public Service service(String s){
+    public Service service(){
         return new Service();
     }
 

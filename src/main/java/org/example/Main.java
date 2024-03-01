@@ -10,12 +10,14 @@ public class Main {
                 new AnnotationConfigApplicationContext(AppConfig.class);
 
         Car auto = (Car) context.getBean("BMW");
+        Car auto2  = (Car) context.getBean("KIA");
 
         Client ctxDriver = (Client) context.getBean("Aru");
         Client ctxDriver2 = (Client) context.getBean("Zhami" );
 
         ctxDriver.setCar(auto);
         System.out.println(ctxDriver );
+        ctxDriver2.setCar(auto2);
         System.out.println(ctxDriver2);
 
         // todo
@@ -23,7 +25,7 @@ public class Main {
         service.setCar(auto);
         service.setName("Auto Wash");
 
-        System.out.println(auto.getServiceAsString());
+//        System.out.println(auto.getServiceAsString());
 
 
         // todo delete Car2 class and just use Car class

@@ -12,13 +12,6 @@ public class Car {
     private ArrayList<String> services = new ArrayList<>();
 
 
-//"Auto wash",
-//        "Tire service",
-//        "Oil change",
-//        "ESTO",
-//        "Fluid Checks"
-
-
     @Override
     public String toString() {
         return "\n Car{" +
@@ -33,26 +26,14 @@ public class Car {
 
     public String getServiceAsString() {
         return services.stream().collect(Collectors.joining(", "));
-//        return "        \"Auto wash\",\n" +
-//                "       \"Tire service\",\n" +
-//                "        \"Oil change\",\n" +
-//                "        \"ESTO\",\n" +
-//                "       \"Fluid Checks\"";
     }
 
-    public String getCar() {
-        return (
-                "\n Car{" +
-                        "number=" + number +
-                        ", name='" + name + '\'' +
-                        '\'' + "} " + Integer.toHexString(hashCode()) + " ! "
-        );
-    }
+
 
     public Car() {
         number = id++;
         name = " GT-R r35 ";
-
+        services.add(" tire mouting");
 
     }
 

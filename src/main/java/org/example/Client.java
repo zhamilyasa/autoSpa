@@ -25,6 +25,7 @@ Client{
         this.bonus = bonus;
         this.paymentMethod = paymentMethod;
         setCar(auto);
+
     }
 
     public String getName() {
@@ -69,7 +70,8 @@ Client{
                 ", bonus=" + bonus +
                 ", paymentMethod=" + paymentMethod +
                 ", \n current order  = " + auto +
-                ", \n    order history = " + cars +
+                ", \n order history = " + cars +
+                ",\n  service "+ auto.getServiceAsString()+
                 '}';
     }
 }
